@@ -8,16 +8,14 @@ public class Win : MonoBehaviour
 {
     [SerializeField] private GameObject p1win;
     [SerializeField] private GameObject p2win;
-    [SerializeField] private GameObject menuButton;
-    [SerializeField] private GameObject replayButton;
+    [SerializeField] private GameObject winDialog;
 
 
     private void Start()
     {
         p1win.SetActive(false);
         p2win.SetActive(false);
-        menuButton.SetActive(false);
-        menuButton.SetActive(false);
+        winDialog.SetActive(false);
     }
 
     public void win(bool p1won) {
@@ -27,8 +25,7 @@ public class Win : MonoBehaviour
         else {
             p2win.SetActive(true);
         }
-        menuButton.SetActive(true);
-        replayButton.SetActive(true);
+        winDialog.SetActive(true);
 
     }
 

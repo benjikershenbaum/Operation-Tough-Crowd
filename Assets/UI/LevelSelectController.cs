@@ -55,12 +55,14 @@ public class LevelSelectController : MonoBehaviour
       yield return new WaitForSeconds(1); 
       float fadeAmount = 0f;
       fade.gameObject.SetActive(true);
-      while (fadeAmount < 1)  {
+      while (fadeAmount <= 1)  {
         fade.color = new Color(0f,0f,0f,fadeAmount);
-        fadeAmount += 0.01f;
+        fadeAmount += 0.05f;
         Debug.Log(fadeAmount);
         yield return new WaitForSeconds(0.01f); 
       }
+      fade.color = new Color(0f,0f,0f,1f);
+
       while (sting.isPlaying)
       {
           yield return null;

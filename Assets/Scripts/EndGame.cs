@@ -10,6 +10,7 @@ public class EndGame : MonoBehaviour
     [SerializeField] private Button replayButton;
     [SerializeField] private Image fade;
     // Start is called before the first frame update
+    private string nextScene;
     void Start()
     {
         menuButton.onClick.AddListener(menuButtonClick);
@@ -18,11 +19,14 @@ public class EndGame : MonoBehaviour
 
     private void menuButtonClick()
     {
-        SceneManager.LoadScene("Menu");
+      nextScene = "Menu";
+        IEnumerator ie = FadeOut();
+        StartCoroutine(ie);
     }
 
     private void replayButtonClick()
     {
+        nextScene = "Sqaure";
         IEnumerator ie = FadeOut();
         StartCoroutine(ie);
     }
@@ -40,7 +44,7 @@ public class EndGame : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        SceneManager.LoadScene("Sqaure");
+        SceneManager.LoadScene(nextScene);
     }
     // Update is called once per frame
     void Update()
