@@ -67,7 +67,7 @@ public class LevelSelectController : MonoBehaviour
       {
           yield return null;
       }
-        SceneManager.LoadScene("Scenes/Sqaure");//levelName[current_selection]);
+        SceneManager.LoadScene("Scenes/"+levelName[current_selection]);
     }
     void Decrement() {
       current_selection = Mathf.Abs(current_selection - 1) % levelScreenshots.Length;  

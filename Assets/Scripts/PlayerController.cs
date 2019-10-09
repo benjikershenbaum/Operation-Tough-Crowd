@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour {
     private AnimationHandler animHandle;
@@ -10,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     private float abilityTime = 30f;
     private float timeLeft = 0.0f;
     public PlayerUIController playerui;
+    private bool isTrain;
 
 
     private void Awake() {
@@ -20,7 +23,27 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
-        transform.position = new Vector3(UnityEngine.Random.Range(-8.0f, 8.0f), UnityEngine.Random.Range(-3.2f, 3.2f), -1.0f);
+
+        if (SceneManager.GetActiveScene().name == "Train")
+        {
+            isTrain = true;
+        }
+        else
+        {
+            isTrain = false;
+        }
+
+        if (isTrain)
+        {
+            transform.position = new Vector3(UnityEngine.Random.Range(-3.5f, 5.6f), UnityEngine.Random.Range(-3.2f, 3.2f), -1.0f);
+
+        }
+        else
+        {
+            transform.position = new Vector3(UnityEngine.Random.Range(-5.6f, 5.6f), UnityEngine.Random.Range(-3.2f, 3.2f), -1.0f);
+
+        }
+
         playerui.UpdateAbilityBar(0);
     }
 

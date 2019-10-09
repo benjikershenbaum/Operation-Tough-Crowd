@@ -26,7 +26,7 @@ public class EndGame : MonoBehaviour
 
     private void replayButtonClick()
     {
-        nextScene = "Sqaure";
+        nextScene = SceneManager.GetActiveScene().name;
         IEnumerator ie = FadeOut();
         StartCoroutine(ie);
     }

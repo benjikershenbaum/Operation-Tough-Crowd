@@ -629,10 +629,10 @@ MonoBehaviour:
   sting: {fileID: 148070909}
   background: {fileID: 1629270189}
   levelScreenshots:
-  - {fileID: 21300000, guid: 970874eaa047f4f6eaee286647a91f3c, type: 3}
+  - {fileID: 21300000, guid: e70788d42ae31b44e8c7a156753f5d32, type: 3}
   - {fileID: 21300000, guid: 7935fcd747355439f96cd67e572b5291, type: 3}
   levelName:
-  - Cat
+  - Train
   - Square
   playButton: {fileID: 1604071630}
   prevButton: {fileID: 1312194978}
@@ -5038,7 +5038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800919666
@@ -5344,7 +5344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 88.599976, y: -0.3999939}
+  m_AnchoredPosition: {x: 88.599976, y: -0.4000244}
   m_SizeDelta: {x: 1023.69995, y: 283.09998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020069984

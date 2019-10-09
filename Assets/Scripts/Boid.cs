@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Boid : MonoBehaviour {
     private AnimationHandler animHandle;
@@ -9,6 +11,7 @@ public class Boid : MonoBehaviour {
     private int state;
     private Vector2 movementDirection;
     private Vector2 target;
+    public bool isTrain;
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag.Contains("AI") || collision.gameObject.tag.Contains("Player"))
@@ -22,7 +25,26 @@ public class Boid : MonoBehaviour {
     private void Awake() {
         animHandle = GetComponent<AnimationHandler>();
         state = 0;
-        transform.position = new Vector3(Random.Range(-8f, 8.0f), Random.Range(-3.3f, 3.3f), -1.0f);
+
+        if (SceneManager.GetActiveScene().name == "Train")
+        {
+            isTrain = true;
+        }
+        else
+        {
+            isTrain = false;
+        }
+
+        if (isTrain)
+        {
+            transform.position = new Vector3(Random.Range(-3.5f, 5.6f), Random.Range(-3.2f, 3.2f), -1.0f);
+
+        }
+        else
+        {
+            transform.position = new Vector3(Random.Range(-5.6f, 5.6f), Random.Range(-3.2f, 3.2f), -1.0f);
+
+        }
         changeTarget();
     }
 
@@ -32,7 +54,14 @@ public class Boid : MonoBehaviour {
 
     private void changeTarget() {
         target += new Vector2(Random.Range(-2.0f, 2.0f), Random.Range(-1.0f, 1.0f));
-        target = new Vector2(Mathf.Clamp(target.x, -13.0f, 13.0f), Mathf.Clamp(target.y, -7.0f, 7.0f));
+        if (isTrain)
+        {
+            target = new Vector2(Mathf.Clamp(target.x, -3.5f, 5.6f), Mathf.Clamp(target.y, -3.2f, 3.2f));
+        }
+        else
+        {
+            target = new Vector2(Mathf.Clamp(target.x, -5.6f, 5.6f), Mathf.Clamp(target.y, -3.2f, 3.2f));
+        }
         movementDirection = Vector3.Normalize(target - new Vector2(transform.position.x, transform.position.y));
 
         if(movementDirection.x < 0) {
@@ -99,6 +128,7 @@ public class Boid : MonoBehaviour {
         state = 1;
         toWait = Random.Range(1.0f, 3.0f);
         idleTime = 0.0f;
+        animHandle.isWalking = false;
     }
 
     private IEnumerator wave() {
