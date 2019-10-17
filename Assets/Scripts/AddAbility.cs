@@ -1,5 +1,5 @@
 ﻿public class AddAbility {
-    private static string[] abilityNames = { "StopNPCAbility" };
+    private static string[] abilityNames = { "StopNPCAbility", "Heal"};
 
     public static string randomiseAbility() {
         int rand = (int)UnityEngine.Random.Range(0, abilityNames.Length - 0.000001f);

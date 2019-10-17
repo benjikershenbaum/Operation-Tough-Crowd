@@ -22,7 +22,6 @@ public class Fade : MonoBehaviour
         {
             fade.color = new Color(0f, 0f, 0f, fadeAmount);
             fadeAmount -= 0.01f;
-            Debug.Log(fadeAmount);
             yield return new WaitForSeconds(0.01f);
         }
         fade.gameObject.SetActive(false);

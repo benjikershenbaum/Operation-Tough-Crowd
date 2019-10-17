@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.5
+  isTrain: 0
 --- !u!50 &384726738057231698
 Rigidbody2D:
   serializedVersion: 4
@@ -372,6 +373,7 @@ GameObject:
   - component: {fileID: 124}
   - component: {fileID: 138}
   - component: {fileID: 131}
+  - component: {fileID: 6211898851774659075}
   m_Layer: 0
   m_Name: ShortHair
   m_TagString: Untagged
@@ -460,6 +462,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6211898851774659075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f0f7530ba9b44b48d5602312b9b264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 0
 --- !u!1 &118
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +599,7 @@ GameObject:
   - component: {fileID: 126}
   - component: {fileID: 140}
   - component: {fileID: 133}
+  - component: {fileID: 6333782254335429831}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Untagged
@@ -672,6 +688,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6333782254335429831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f0f7530ba9b44b48d5602312b9b264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 0
 --- !u!1 &120
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +712,7 @@ GameObject:
   - component: {fileID: 127}
   - component: {fileID: 141}
   - component: {fileID: 134}
+  - component: {fileID: 2459501690680024110}
   m_Layer: 0
   m_Name: LongHair
   m_TagString: Untagged
@@ -771,6 +801,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2459501690680024110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f0f7530ba9b44b48d5602312b9b264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 0
 --- !u!1 &121
 GameObject:
   m_ObjectHideFlags: 0

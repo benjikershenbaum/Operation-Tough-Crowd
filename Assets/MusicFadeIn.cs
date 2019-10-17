@@ -13,7 +13,6 @@ public class MusicFadeIn : MonoBehaviour
     }
     IEnumerator FadeMusic() {
       for (float volumeAmount = 0f; volumeAmount <= 0.75f; volumeAmount+=0.01f){
-        Debug.Log(volumeAmount);
         foreach(AudioSource p in players) {
           p.volume = volumeAmount;
           yield return new WaitForSeconds(0.05f);

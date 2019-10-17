@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Square.unity
     guid: 7fa698f0c92b2c04eb0230c19219dfd0
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 13834a8cf4ab3dd4180df96ec377d226
   m_configObjects: {}

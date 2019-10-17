@@ -64,6 +64,9 @@
     <Compile Include="Assets\MusicFadeIn.cs" />
     <Compile Include="Assets\Pause.cs" />
     <Compile Include="Assets\PlayerUIController.cs" />
+    <Compile Include="Assets\Quit.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Heal.cs" />
+    <Compile Include="Assets\Scripts\Abilities\InvertControls.cs" />
     <Compile Include="Assets\Scripts\Abilities\StopNPCAbility.cs" />
     <Compile Include="Assets\Scripts\Ability.cs" />
     <Compile Include="Assets\Scripts\AddAbility.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\scr.cs" />
     <Compile Include="Assets\Scripts\skin.cs" />
+    <Compile Include="Assets\Scripts\TrainMove.cs" />
     <Compile Include="Assets\Scripts\Win.cs" />
     <Compile Include="Assets\Scripts\XManager.cs" />
     <Compile Include="Assets\UI\ChangeDifficulty.cs" />

@@ -10,6 +10,7 @@ public class PlayerInteract : MonoBehaviour
     private LayerMask aiSpecialMask = 1 << 8;
     private LayerMask playerMask = 1 << 9;
     private GameObject manager;
+    private int npcKills = 3;
     private bool win;
 
     private bool foundAISpecial, foundPlayer, foundAI;
@@ -77,8 +78,18 @@ public class PlayerInteract : MonoBehaviour
             manager.GetComponent<XManager>().flash();
             Destroy(ai.gameObject);
             playerui.SetAlert(false);
-            playerui.SetAlert(false);
             manager.GetComponent<FallSound>().soundFall();
+            playerui.SetSkull(3-npcKills);
+
+            npcKills -= 1;
+            if (npcKills <= 0)
+            {
+                equiped = false;
+                playerui.SetAlert(false);
+                manager.GetComponent<Win>().win(isSecondPlayer);
+                manager.GetComponent<FallSound>().soundFall();
+                Destroy(transform.gameObject);
+            }
         }
 
 

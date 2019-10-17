@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class AIManager : MonoBehaviour {
     [SerializeField] private bool isMenu;
@@ -8,16 +10,25 @@ public class AIManager : MonoBehaviour {
     [SerializeField] private int [] diffs;
     [SerializeField] private int numAI;
     private static List<Transform> npcs = new List<Transform>();
+    private bool isTutorial=false;
 
     private void Start() {
-      if (!isMenu){
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            isTutorial = true;
+        }
+        if (!isMenu && !isTutorial){
         numAI = diffs[Difficulty.level];
-        
-      } else {
-        numAI = 40;
-      }
-      for(int i = 0; i < numAI; i++) {
-        npcs.Add((Instantiate(npc).transform));
+
+        } else if (isTutorial){
+            numAI = 0;
+        }
+        else
+        {
+            numAI = 40;
+        }
+        for (int i = 0; i < numAI; i++) {
+            npcs.Add((Instantiate(npc).transform));
       }
     }
 

@@ -53,6 +53,7 @@ public class Boid : MonoBehaviour {
     }
 
     private void changeTarget() {
+        movementSpeed = 0.5f + Random.Range(-0.2f, 0.1f);
         target += new Vector2(Random.Range(-2.0f, 2.0f), Random.Range(-1.0f, 1.0f));
         if (isTrain)
         {

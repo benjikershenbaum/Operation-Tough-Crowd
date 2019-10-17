@@ -164,7 +164,6 @@ public class PlayerController : MonoBehaviour {
             }
             playerui.UpdateAbilityBar(timeLeft / abilityTime);
         }
-        Debug.Log(timeLeft);
     }
 
     private IEnumerator wave() {
